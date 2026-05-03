@@ -1,0 +1,334 @@
+{
+  "common": {
+    "nav": {
+      "about": "About SAA 2025",
+      "awards": "Awards Information",
+      "kudos": "Sun* Kudos",
+      "standards": "Common Standards"
+    },
+    "lang": {
+      "vi": "VN",
+      "en": "EN"
+    }
+  },
+  "LanguageMenu": {
+    "triggerAriaLabel": "Select language",
+    "vi": "Tiếng Việt",
+    "en": "English"
+  },
+  "login": {
+    "tagline": "[TODO: EN translation] Start your journey with SAA 2025.\nSign in to explore!",
+    "cta": "LOGIN With Google",
+    "error": {
+      "oauth_failed": "[TODO: EN translation] Login failed. Please try again.",
+      "cookies_required": "[TODO: EN translation] Your browser is blocking cookies. Please enable cookies to log in."
+    }
+  },
+  "home": {
+    "hero": {
+      "title_line1": "ROOT",
+      "title_line2": "FURTHER"
+    },
+    "countdown": {
+      "subtitle": "Comming soon",
+      "days": "DAYS",
+      "hours": "HOURS",
+      "minutes": "MINUTES"
+    },
+    "event": {
+      "time_label": "[TODO: EN] Time:",
+      "date_value": "12/26/2025",
+      "location_label": "[TODO: EN] Location:",
+      "location_value": "Âu Cơ Art Center",
+      "livestream_note": "[TODO: EN translation] Broadcast live via Livestream"
+    },
+    "cta": {
+      "about_awards": "ABOUT AWARDS",
+      "about_kudos": "ABOUT KUDOS",
+      "detail": "[TODO: EN] Details"
+    },
+    "about": {
+      "body_p1": "[TODO: EN translation] Paragraph 1",
+      "body_p2": "[TODO: EN translation] Paragraph 2",
+      "body_p3": "[TODO: EN translation] Paragraph 3",
+      "body_p4": "[TODO: EN translation] Paragraph 4",
+      "body_p5": "[TODO: EN translation] Paragraph 5",
+      "quote": "A tree with deep roots fears no storm",
+      "quote_source": "(English proverb)"
+    },
+    "awards": {
+      "section_caption": "Sun* annual awards 2025",
+      "section_title": "[TODO: EN] Awards system",
+      "top-talent": {
+        "title": "Top Talent",
+        "description": "[TODO: EN translation] Honoring top individuals excellent in every aspect"
+      },
+      "top-project": {
+        "title": "Top Project",
+        "description": "[TODO: EN translation] Top Project description"
+      },
+      "top-project-leader": {
+        "title": "Top Project Leader",
+        "description": "[TODO: EN translation] Top Project Leader description"
+      },
+      "best-manager": {
+        "title": "Best Manager",
+        "description": "[TODO: EN translation] Best Manager description"
+      },
+      "signature-2025-creator": {
+        "title": "Signature 2025 - Creator",
+        "description": "[TODO: EN translation] Signature 2025 - Creator description"
+      },
+      "mvp": {
+        "title": "MVP (Most Valuable Person)",
+        "description": "[TODO: EN translation] MVP description"
+      }
+    },
+    "kudos": {
+      "kicker": "[TODO: EN] Recognition movement",
+      "title": "Sun* Kudos",
+      "description_rich": "<strong>[TODO: EN] NEW IN SAA 2025</strong> [TODO: EN translation] Kudos description body."
+    },
+    "menu": {
+      "profile": "Profile",
+      "sign_out": "Sign out",
+      "admin": "Admin Dashboard"
+    },
+    "widget": {
+      "stub_tooltip": "Coming soon",
+      "aria_label": "Quick actions"
+    },
+    "a11y": {
+      "logo": "Root Further — SAA 2025",
+      "unread_notifications": "{count} unread notifications",
+      "open_menu": "Open menu",
+      "close_menu": "Close menu"
+    }
+  },
+  "footer": {
+    "copyright": "[TODO: EN translation] Copyright belongs to Sun* © 2025"
+  },
+  "nav": {
+    "language_label": "[TODO: EN translation] Language"
+  },
+  "awards": {
+    "subtitle": "Sun* annual awards 2025",
+    "title": "[TODO: EN] SAA 2025 Awards System",
+    "metaTitle": "[TODO: EN] SAA 2025 Awards System — Sun* Annual Awards",
+    "metaDescription": "[TODO: EN] Learn about the Sun* Annual Awards 2025 award system",
+    "menu": {
+      "top-talent": "Top Talent",
+      "top-project": "Top Project",
+      "top-project-leader": "Top Project Leader",
+      "best-manager": "Best Manager",
+      "signature-2025-creator": "Signature 2025 - Creator",
+      "mvp": "MVP"
+    },
+    "label": {
+      "quantity": "[TODO: EN] Number of awards:",
+      "value": "[TODO: EN] Award value:",
+      "perAward": "[TODO: EN] per award"
+    },
+    "unit": {
+      "individual": "[TODO: EN] Individual",
+      "team": "[TODO: EN] Team",
+      "unit": "[TODO: EN] Unit"
+    },
+    "value": {
+      "recipient": {
+        "individual": "[TODO: EN] (individual)",
+        "team": "[TODO: EN] (team)"
+      }
+    },
+    "empty": "[TODO: EN] Award details are not available yet.",
+    "error": {
+      "title": "[TODO: EN] Couldn't load the awards. Please try again.",
+      "retry": "[TODO: EN] Retry"
+    },
+    "top-talent": {
+      "descriptionLong": "[TODO: EN translation] Long description of Top Talent."
+    },
+    "top-project": {
+      "descriptionLong": "[TODO: EN translation] Long description of Top Project."
+    },
+    "top-project-leader": {
+      "descriptionLong": "[TODO: EN translation] Long description of Top Project Leader."
+    },
+    "best-manager": {
+      "descriptionLong": "[TODO: EN translation] Long description of Best Manager."
+    },
+    "signature-2025-creator": {
+      "descriptionLong": "[TODO: EN translation] Long description of Signature 2025 - Creator."
+    },
+    "mvp": {
+      "descriptionLong": "[TODO: EN translation] Long description of MVP."
+    }
+  },
+  "kudos": {
+    "page": {
+      "brand_caption": "Sun* Annual Awards 2025"
+    },
+    "meta": {
+      "title": "Sun* Kudos – Live Board — SAA 2025",
+      "description": "[TODO: EN translation] Sun* employee recognition system for Annual Awards 2025"
+    },
+    "hero": {
+      "subtitle": "[TODO: EN translation] Employee recognition and appreciation system",
+      "compose_cta": "[TODO: EN translation] Who would you like to thank today?",
+      "compose_aria": "[TODO: EN translation] Compose Kudo",
+      "search_cta": "[TODO: EN translation] Search",
+      "search_aria": "[TODO: EN translation] Search sunner"
+    },
+    "highlight": {
+      "section_title": "HIGHLIGHT KUDOS",
+      "total_count": "{count} KUDOS",
+      "filter_all_hashtags": "[TODO: EN translation] All hashtags",
+      "filter_all_depts": "[TODO: EN translation] All departments",
+      "filter_dept_label": "[TODO: EN translation] Filter by department",
+      "filter_hashtag_label": "Hashtag",
+      "view_detail": "[TODO: EN translation] View detail",
+      "empty": "[TODO: EN translation] No highlights yet.",
+      "carousel_prev": "[TODO: EN translation] Previous slide",
+      "carousel_next": "[TODO: EN translation] Next slide",
+      "slide_counter": "{current} / {total}"
+    },
+    "feed": {
+      "section_title": "ALL KUDOS",
+      "load_more": "[TODO: EN translation] Load more",
+      "load_more_loading": "[TODO: EN translation] Loading...",
+      "load_more_retry": "[TODO: EN translation] Retry",
+      "empty": "[TODO: EN translation] No Kudos yet.",
+      "error": "[TODO: EN translation] Unable to load Kudos. Please try again.",
+      "retry": "[TODO: EN translation] Retry",
+      "reconnecting": "[TODO: EN translation] Reconnecting...",
+      "view_detail": "[TODO: EN translation] View detail",
+      "copy_link": "[TODO: EN translation] Copy link",
+      "copied": "[TODO: EN translation] Copied!",
+      "copy_error": "[TODO: EN translation] Could not copy link",
+      "heart_own_post": "[TODO: EN translation] You cannot like your own post",
+      "images_more": "[TODO: EN translation] +{count} photos"
+    },
+    "stats": {
+      "section_title": "[TODO: EN translation] Your stats",
+      "kudos_received": "[TODO: EN translation] Kudos received:",
+      "kudos_sent": "[TODO: EN translation] Kudos sent:",
+      "hearts": "[TODO: EN translation] Hearts received:",
+      "boxes_opened": "[TODO: EN translation] Gifts opened:",
+      "boxes_closed": "[TODO: EN translation] Gifts unopened:",
+      "open_gift": "[TODO: EN translation] Open gift",
+      "empty_boxes": "[TODO: EN translation] No gifts yet"
+    },
+    "leaderboard": {
+      "section_title": "[TODO: EN translation] 10 sunners — latest gift recipients",
+      "empty": "[TODO: EN translation] No data yet",
+      "view_profile": "[TODO: EN translation] View profile"
+    },
+    "spotlight": {
+      "section_title": "SPOTLIGHT BOARD",
+      "kudos_total": "{count} KUDOS",
+      "search_placeholder": "Search sunner...",
+      "search_placeholder_board": "Search",
+      "empty": "No sunners found.",
+      "pan_zoom_on": "Enable pan/zoom",
+      "pan_zoom_off": "Disable pan/zoom",
+      "activity_received": "{time} {name} received a new Kudos",
+      "activity_empty": "No recent activity yet.",
+      "activity_aria": "Latest Kudos activity",
+      "expand_aria": "Spotlight board fullscreen"
+    },
+    "a11y": {
+      "heart_button": "[TODO: EN translation] Like ({count} hearts)",
+      "heart_button_active": "[TODO: EN translation] Unlike ({count} hearts)",
+      "heart_disabled_own": "[TODO: EN translation] Cannot like your own post",
+      "copy_link_button": "[TODO: EN translation] Copy link",
+      "lightbox_close": "[TODO: EN translation] Close",
+      "lightbox_prev": "[TODO: EN translation] Previous image",
+      "lightbox_next": "[TODO: EN translation] Next image",
+      "lightbox_counter": "[TODO: EN translation] Image {current} / {total}",
+      "avatar_preview": "[TODO: EN translation] View profile {name}"
+    },
+    "compose": {
+      "modal_title": "Send appreciation and recognition to your teammate",
+      "fields": {
+        "recipient_label": "Recipient",
+        "recipient_placeholder": "Search",
+        "title_label": "Title",
+        "title_placeholder": "Enter a title for your teammate",
+        "title_hint": "Give your teammate a recognition title",
+        "content_placeholder": "Send your appreciation and recognition to your teammate here!",
+        "content_hint": "You can use “@ + name” to mention a colleague",
+        "toolbar_label": "Text formatting",
+        "toolbar_bold": "Bold",
+        "toolbar_italic": "Italic",
+        "toolbar_strikethrough": "Strikethrough",
+        "toolbar_numbered_list": "Numbered list",
+        "toolbar_link": "Insert link",
+        "toolbar_quote": "Quote",
+        "link_dialog_title": "Add link",
+        "link_dialog_content_label": "Text",
+        "link_dialog_content_placeholder": "Display text",
+        "link_dialog_url_label": "URL",
+        "link_dialog_url_placeholder": "https://",
+        "link_dialog_url_invalid": "Invalid URL",
+        "link_dialog_cancel": "Cancel",
+        "link_dialog_save": "Save",
+        "hashtag_label": "Hashtag",
+        "hashtag_add": "+ Hashtag",
+        "hashtag_max": "Max 5",
+        "image_label": "Image",
+        "image_add": "+ Image",
+        "image_max": "Max 5",
+        "anonymous": "Send appreciation and recognition anonymously",
+        "anonymous_nickname_label": "[TODO: EN translation] Anonymous nickname",
+        "anonymous_nickname_placeholder": "Doraemon",
+        "anonymous_nickname_hint": "",
+        "community_standards": "Community standards",
+        "char_counter": "{n}/{max}",
+        "mention_listbox_label": "Mention suggestions",
+        "mention_loading": "Searching…",
+        "mention_empty": "No matching colleague"
+      },
+      "actions": {
+        "cancel": "Cancel",
+        "submit": "Send"
+      },
+      "errors": {
+        "recipient_required": "Please select a recipient",
+        "Invalid uuid": "Invalid recipient",
+        "title_required": "Please enter a title",
+        "title_too_long": "Title cannot exceed 100 characters",
+        "content_required": "Please write your appreciation",
+        "hashtag_required": "Please select at least 1 hashtag",
+        "hashtag_max": "Maximum 5 hashtags",
+        "image_max": "Maximum 5 images",
+        "image_too_large": "Image cannot exceed 5MB",
+        "image_invalid_type": "Unsupported image format (only jpeg, png, gif, webp)",
+        "anon_nickname_required": "[TODO: EN translation] Please enter a nickname when sending anonymously",
+        "anon_nickname_too_long": "[TODO: EN translation] Nickname cannot exceed 50 characters",
+        "missing_required_fields": "[TODO: EN translation] You need to fill in Recipient, Message, and Hashtag to send Kudos!",
+        "submit_failed": "Submit failed — please try again."
+      },
+      "success": {
+        "submit": "Kudo sent successfully!"
+      },
+      "discard": {
+        "title": "Discard your changes?",
+        "message": "All changes will be lost.",
+        "confirm": "Discard",
+        "cancel": "Keep editing"
+      },
+      "loading": {
+        "submitting": "Sending...",
+        "uploading_image": "Uploading..."
+      }
+    }
+  },
+  "prelaunch": {
+    "headline": "[TODO: EN translation] The event will start in",
+    "days_label": "DAYS",
+    "hours_label": "HOURS",
+    "minutes_label": "MINUTES",
+    "page_title": "[TODO: EN translation] The event will start in",
+    "meta_description": "[TODO: EN translation] The event will start in"
+  }
+}

@@ -1,0 +1,440 @@
+@import "tailwindcss";
+
+:root {
+  /* Colors */
+  --color-bg-dark: #00101A;
+  --color-bg-dark-alt: #001320;
+  --color-bg-header: rgba(11, 15, 18, 0.8);
+  --color-cta-bg: #FFEA9E;
+  --color-cta-bg-hover: #FFE070;
+  --color-cta-bg-active: #FFD740;
+  --color-cta-text: #00101A;
+  --color-text-primary: #FFFFFF;
+  --color-text-muted: #DBD1C1;
+  --color-divider: #2E3940;
+
+  /* Homepage-specific colors */
+  --color-accent-gold: #FAE287;
+  --color-accent-gold-alt: #FFEA9E;
+  --color-cta-outline-bg: rgba(255, 234, 158, 0.10);
+  --color-cta-outline-border: #998C5F;
+  --color-status-unread: #D4271D;
+  --color-hover-surface: rgba(255, 255, 255, 0.10);
+  --color-overlay-shade: rgba(0, 0, 0, 0.25);
+
+  /* Border */
+  --border-footer: 1px solid var(--color-divider);
+  --border-cta-outline: 1px solid var(--color-cta-outline-border);
+  --border-avatar: 1px solid var(--color-cta-outline-border);
+
+  /* Border Radius */
+  --radius-btn: 8px;
+  --radius-lang: 4px;
+  --radius-tile: 4px;
+  --radius-card: 8px;
+  --radius-avatar: 9999px;
+  --radius-widget: 9999px;
+
+  /* Z-index scale (Homepage) */
+  --z-hero-bg: 0;
+  --z-hero-overlay: 1;
+  --z-main-content: 2;
+  --z-header: 10;
+  --z-widget: 20;
+  --z-dropdown: 30;
+  --z-modal: 50;
+  --z-tooltip: 60;
+
+  /* Shadows (Homepage) */
+  --shadow-card-default: 0 0 32px rgba(255, 234, 158, 0.35);
+  --shadow-card-hover: 0 0 48px rgba(255, 234, 158, 0.55);
+  --shadow-widget: 0 4px 12px rgba(0, 0, 0, 0.25);
+
+  /* Spacing — Header */
+  --spacing-header-px: 144px;
+  --spacing-header-py: 12px;
+  --spacing-header-gap: 238px;
+
+  /* Spacing — Main */
+  --spacing-main-px: 144px;
+  --spacing-main-py: 96px;
+  --spacing-content-gap: 80px;
+  --spacing-tagline-btn: 24px;
+  --spacing-content-pl: 16px;
+
+  /* Spacing — Button */
+  --spacing-btn-px: 24px;
+  --spacing-btn-py: 16px;
+
+  /* Spacing — Footer */
+  --spacing-footer-px: 90px;
+  --spacing-footer-py: 40px;
+
+  /* Spacing — Homepage */
+  --spacing-section-gap: 120px;
+  --spacing-content-max-w: 1224px;
+  --spacing-awards-gap: 80px;
+  --spacing-card-gap: 24px;
+  --spacing-card-grid-x: 108px;
+  --spacing-card-grid-y: 80px;
+  --spacing-countdown-gap: 40px;
+  --spacing-tile-gap: 14px;
+  --spacing-cta-gap: 40px;
+  --spacing-hero-info-gap: 8px;
+  --spacing-hero-info-row-gap: 60px;
+  --spacing-header-inner-gap: 238px;
+  --spacing-header-logo-gap: 64px;
+  --spacing-header-nav-gap: 24px;
+  --spacing-header-controls-gap: 16px;
+  --spacing-footer-gap: 80px;
+  --spacing-footer-nav-gap: 48px;
+  --spacing-kudos-content-gap: 32px;
+
+  /* Typography — Language label */
+  --text-nav-lang-size: 16px;
+  --text-nav-lang-weight: 700;
+  --text-nav-lang-lh: 24px;
+  --text-nav-lang-ls: 0.15px;
+
+  /* Typography — Tagline */
+  --text-tagline-size: 20px;
+  --text-tagline-weight: 700;
+  --text-tagline-lh: 40px;
+  --text-tagline-ls: 0.5px;
+
+  /* Typography — CTA Button */
+  --text-cta-size: 22px;
+  --text-cta-weight: 700;
+  --text-cta-lh: 28px;
+
+  /* Typography — Footer */
+  --text-footer-size: 16px;
+  --text-footer-weight: 700;
+  --text-footer-lh: 24px;
+
+  /* Typography — Homepage */
+  --text-nav-active-size: 14px;
+  --text-nav-active-weight: 700;
+  --text-nav-active-lh: 20px;
+  --text-nav-active-ls: 0.10px;
+
+  --text-nav-size: 16px;
+  --text-nav-weight: 700;
+  --text-nav-lh: 24px;
+  --text-nav-ls: 0.15px;
+
+  --text-hero-h1-size: 200px;
+  --text-hero-h1-weight: 400;
+  --text-hero-h1-lh: 200px;
+  --text-hero-h1-ls: -4px;
+
+  --text-hero-sub-size: 24px;
+  --text-hero-sub-weight: 700;
+  --text-hero-sub-lh: 32px;
+
+  --text-countdown-num-size: 49.152px;
+  --text-countdown-num-weight: 400;
+
+  --text-countdown-label-size: 16px;
+  --text-countdown-label-weight: 700;
+  --text-countdown-label-lh: 24px;
+  --text-countdown-label-ls: 0.5px;
+
+  --text-cta-btn-sm-size: 16px;
+  --text-cta-btn-sm-weight: 700;
+  --text-cta-btn-sm-lh: 24px;
+  --text-cta-btn-sm-ls: 0.5px;
+
+  --text-section-caption-size: 16px;
+  --text-section-caption-weight: 500;
+  --text-section-caption-lh: 24px;
+  --text-section-caption-ls: 0.15px;
+
+  --text-section-title-size: 57px;
+  --text-section-title-weight: 700;
+  --text-section-title-lh: 64px;
+  --text-section-title-ls: -0.25px;
+
+  --text-card-title-size: 24px;
+  --text-card-title-weight: 400;
+  --text-card-title-lh: 32px;
+
+  /* Transitions */
+  --transition-btn: background-color 150ms ease-in-out;
+  --transition-lang: background-color 150ms ease-in-out;
+  --transition-dropdown: opacity 150ms ease-out, transform 150ms ease-out;
+
+  /* Language Dropdown — frame hUyaaugye2 (`Dropdown-ngôn ngữ`).
+     See .momorph/specs/hUyaaugye2-Dropdown-ngon-ngu/design-style.md. */
+  --color-lang-panel-bg: #00070C;                          /* details-container-2 */
+  --color-lang-panel-border: #998C5F;                      /* details-border (alias of --color-cta-outline-border) */
+  --color-lang-selected-bg: rgba(255, 234, 158, 0.20);     /* yellow @ 20% — active locale row */
+  --color-lang-selected-bg-hover: rgba(255, 234, 158, 0.28);
+  --color-lang-selected-bg-active: rgba(255, 234, 158, 0.32);
+  --color-lang-default-bg-hover: rgba(255, 234, 158, 0.10);  /* same hex as --color-cta-outline-bg */
+  --color-lang-default-bg-active: rgba(255, 234, 158, 0.18);
+  --color-lang-focus-ring: #FFEA9E;                        /* alias of --color-cta-bg */
+  --radius-lang-panel: 8px;
+  --radius-lang-selected: 2px;
+  --radius-lang-row: 4px;
+  --transition-lang-row: background-color 120ms ease-in-out;
+
+  /* Awards Information page tokens */
+  --shadow-award-image: 0 4px 4px 0 rgba(0, 0, 0, 0.25), 0 0 6px 0 #FAE287;
+  --text-shadow-active: 0 4px 4px rgba(0, 0, 0, 0.25), 0 0 6px #FAE287;
+  /* Outer glow for active side-nav item — applied via CSS `filter` so it also haloes SVG icons (drop-shadow respects the alpha channel of the rendered shape, not its bounding box). */
+  --filter-glow-active: drop-shadow(0 0 1px rgba(250, 226, 135, 0.5));
+  --backdrop-blur-card: 32px;
+  --spacing-awards-content-w: 480px;
+  --spacing-awards-image-w: 336px;
+  --spacing-awards-row-gap: 80px;
+  --color-cta-outline-hover: rgba(255, 234, 158, 0.08);
+
+  /* Prelaunch page tokens */
+  --spacing-prelaunch-page-px: 144px;
+  --spacing-prelaunch-page-py: 96px;
+  --spacing-prelaunch-section-gap: 120px;
+  --spacing-prelaunch-units-gap: 60px;
+  --spacing-prelaunch-unit-stack-gap: 21px;
+  --spacing-prelaunch-digits-gap: 21px;
+  --color-tile-border: #FFEA9E;
+  --color-tile-fill-top: #FFFFFF;
+  --color-tile-fill-bottom: rgba(255, 255, 255, 0.10);
+  --radius-tile-prelaunch: 12px;
+  --blur-tile-backdrop: blur(24.96px);
+  --overlay-prelaunch-cover: linear-gradient(18deg, #00101A 15.48%, rgba(0, 18, 29, 0.46) 52.13%, rgba(0, 19, 32, 0.00) 63.41%);
+}
+
+@theme inline {
+  --font-montserrat: var(--font-montserrat);
+  --font-montserrat-alt: var(--font-montserrat-alt);
+  --font-digital: var(--font-digital);
+}
+
+body {
+  background: var(--color-bg-dark);
+  color: var(--color-text-primary);
+}
+
+/* `--font-digital` is now provided by next/font/local in app/layout.tsx (DSEG7-Classic Bold).
+   Keep the monospace tail as the ultimate fallback if the WOFF2 fails to load. */
+
+/* Prelaunch page — reduced motion (FR compliance).
+   No CSS animation is applied to the digit tiles; the minute-tick update is a React
+   setState, which is inherently motion-free. If a future fade animation is added via
+   .prelaunch-digit-fade, add: @media (prefers-reduced-motion: reduce) { .prelaunch-digit-fade { animation: none; } } */
+
+/* Login hero background — cover fills the full container at all viewports, right top shows colorful wave portion */
+.login-hero-bg {
+  background-image: url('/assets/login/images/hero-bg.jpg');
+  background-position: right top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: var(--color-bg-dark);
+}
+
+/* Homepage hero background — organic root illustration, cover+right top */
+.home-hero-bg {
+  background-image: url('/assets/home/hero-bg.jpg');
+  background-position: right top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: var(--color-bg-dark);
+}
+
+/* ─── Kudos Live Board ───────────────────────────── */
+:root {
+  /* Colors */
+  --color-kudos-bg-panel: #00070C;
+  --color-kudos-cream: #FFF8E1;
+  --color-kudos-cream-shelf: #FFF3C6;
+  --color-kudos-text-on-cream: #00101A;
+  --color-kudos-text-timestamp: #999999;
+  --color-kudos-text-footer: rgba(255, 255, 255, 0.60);
+  --color-kudos-gold-hover: rgba(255, 234, 158, 0.40);
+  --color-kudos-accent-hot: #F17676;
+  --color-kudos-border: #998C5F;
+  /* Figma `--Details-SecondaryButton-Normal` — hero pills & filter dropdowns */
+  --color-kudos-pill-idle: rgba(255, 234, 158, 0.1);
+  --color-kudos-pill-hover: rgba(255, 234, 158, 0.4);
+  --color-divider-dark: #2E3940;
+  --color-accent-red: #D4271D;
+  --color-accent-red-hot: #F17676;
+  /* --color-kudos-heart-active: documentation alias for --color-status-unread (#D4271D) — use --color-status-unread directly */
+
+  /* Radius */
+  --radius-kudos-card: 24px;
+  --radius-kudos-highlight: 16px;
+  --radius-kudos-panel: 16px;
+  --radius-kudos-pill-lg: 64px;
+  --radius-kudos-pill-md: 48px;
+  --radius-kudos-arrow: 4px;
+  --radius-kudos-open-gift: 8px;
+
+  /* Spacing */
+  --spacing-kudos-card-pad: 40px;
+  --spacing-kudos-card-pad-b: 16px;
+  --spacing-kudos-card-gap: 16px;
+  --spacing-kudos-panel-pad: 24px;
+  --spacing-kudos-panel-gap: 10px;
+  --spacing-kudos-feed-gap: 24px;
+
+  /* Borders */
+  --border-kudos-highlight: 4px solid #FFEA9E;
+  --border-kudos-panel: 1px solid #998C5F;
+  --border-kudos-avatar: 1.869px solid #FFFFFF;
+
+  /* Skeleton */
+  --color-kudos-skeleton: #0D1E29;
+  --color-kudos-skeleton-shimmer: #1A2E3D;
+
+  /* Z-index */
+  --z-kudos-lightbox: 60;
+  --z-kudos-tooltip: 70;
+  --z-kudos-toast: 80;
+
+  /* Sticky header on Kudos Live Board — Figma `mms_A_Header` rgba(16,20,23,0.80) */
+  --color-bg-header-kudos: rgba(16, 20, 23, 0.80);
+
+  /* Carousel edge fade — design-style `--gradient-mask-left` / `mask-right` (page bg) */
+  --gradient-kudos-carousel-mask-left: linear-gradient(90deg, var(--color-bg-dark) 0%, transparent 100%);
+  --gradient-kudos-carousel-mask-right: linear-gradient(270deg, var(--color-bg-dark) 0%, transparent 100%);
+
+  /* B.7 Spotlight board canvas — base + mesh + ribbon washes (Figma MaZUn5xHXZ) */
+  --color-spotlight-canvas-base: #00070c;
+  --spotlight-board-min-height: min(420px, 52vh);
+  --spotlight-mesh-line: rgba(255, 255, 255, 0.08);
+  --spotlight-ribbon-warm: rgba(180, 120, 60, 0.22);
+  --spotlight-ribbon-teal: rgba(60, 140, 130, 0.12);
+}
+
+/* Hero background for Kudos page — colorful streak banner from Figma */
+.kudos-hero-bg {
+  background-image: url('/assets/home/hero-bg.jpg');
+  background-position: right top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: var(--color-bg-dark);
+}
+
+/* ─── Kudos Compose Modal (Viết Kudo, frame ihQ26W78P2) ─── */
+:root {
+  /* Colors */
+  --color-kudos-compose-modal-bg: #FFF8E1;
+  --color-kudos-compose-text: #00101A;
+  --color-kudos-compose-border: #998C5F;
+  --color-kudos-compose-input-bg: #FFFFFF;
+  --color-kudos-compose-text-secondary: #999999;
+  --color-kudos-compose-required: #CF1322;
+  --color-kudos-compose-primary-btn: #FFEAA9;
+  --color-kudos-compose-primary-btn-hover: #FFE08A;
+  --color-kudos-compose-primary-btn-active: #FFD55A;
+  --color-kudos-compose-secondary-btn-bg: rgba(255, 234, 158, 0.10);
+  --color-kudos-compose-secondary-btn-bg-hover: rgba(255, 234, 158, 0.25);
+  --color-kudos-compose-secondary-btn-bg-active: rgba(255, 234, 158, 0.40);
+
+  /* Typography */
+  --text-kudos-compose-title-size: 32px;
+  --text-kudos-compose-title-weight: 700;
+  --text-kudos-compose-title-lh: 40px;
+  --text-kudos-compose-label-size: 22px;
+  --text-kudos-compose-label-weight: 700;
+  --text-kudos-compose-label-lh: 28px;
+  --text-kudos-compose-body-size: 16px;
+  --text-kudos-compose-body-weight: 700;
+  --text-kudos-compose-body-lh: 24px;
+  --text-kudos-compose-body-ls: 0.15px;
+
+  /* Spacing — Figma `Viết KUDO` instance `520:11647`: 752 × 1012 px,
+     padding 40 px, gap 32 px (between sections), inner Content frame
+     gap 24 px (between editor / hashtag / image). Field-gap 16 px is the
+     internal label↔input distance. Modal still has `overflow-y: auto` as a
+     safety net for short viewports — the design's intended height (1012)
+     overflows a typical laptop viewport (~800 px). */
+  --spacing-kudos-compose-padding: 40px;
+  --spacing-kudos-compose-gap: 32px;
+  --spacing-kudos-compose-section-gap: 24px;
+  --spacing-kudos-compose-field-gap: 16px;
+  --spacing-kudos-compose-input-px: 24px;
+  --spacing-kudos-compose-input-py: 16px;
+
+  /* Border & Radius */
+  --radius-kudos-compose-modal: 24px;
+  --radius-kudos-compose-input: 8px;
+  --radius-kudos-compose-image: 18px;
+  --radius-kudos-compose-cancel-btn: 4px;
+  --radius-kudos-compose-checkbox: 4px;
+}
+
+/* ─────────────────────────────────────────────────── */
+
+/* Hero overlays shared between Login and Homepage */
+.hero-overlay-h {
+  background: linear-gradient(90deg, #00101A 0%, #00101A 25.41%, transparent 100%);
+}
+.hero-overlay-v {
+  background: linear-gradient(0deg, #00101A 22.48%, transparent 51.74%);
+}
+
+/* Restored block / list / link styling for rich Kudos content. Tailwind v4
+   Preflight resets ol/ul/li/blockquote/a to invisible defaults; the
+   `RichTextEditor` toolbar produces these tags via execCommand and the feed
+   cards render them via dangerouslySetInnerHTML, so we re-establish minimal
+   visible styles scoped to a single class. The same class is applied to the
+   editor surface AND the rendered cards so the WYSIWYG promise actually
+   holds.
+
+   Wrapped in `@layer utilities` so Turbopack's HMR pipeline tracks them
+   reliably — without an explicit layer, edits to the tail of this file have
+   intermittently failed to invalidate the CSS chunk during incremental
+   rebuilds. */
+@layer utilities {
+  .kudos-rich-content ol {
+    list-style: decimal outside;
+    padding-inline-start: 24px;
+    margin: 4px 0;
+  }
+  .kudos-rich-content ul {
+    list-style: disc outside;
+    padding-inline-start: 24px;
+    margin: 4px 0;
+  }
+  .kudos-rich-content li {
+    display: list-item;
+  }
+  .kudos-rich-content blockquote {
+    border-left: 3px solid var(--color-cta-bg);
+    padding-left: 12px;
+    margin: 8px 0;
+    color: var(--color-text-muted);
+    font-style: italic;
+  }
+  .kudos-rich-content a {
+    color: var(--color-cta-bg);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+  .kudos-rich-content a:hover {
+    text-decoration-thickness: 2px;
+  }
+
+  /* Countdown digit ghost — every 7-segment cell is faintly visible like a
+     calculator LCD. Done as ::before so the literal '8' stays out of the
+     element's textContent (lets `toHaveTextContent('06')` etc. keep working). */
+  .countdown-digit {
+    position: relative;
+  }
+  .countdown-digit::before {
+    content: '8';
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(255, 255, 255, 0.08);
+    font-family: var(--font-digital);
+    font-size: inherit;
+    line-height: 1;
+    pointer-events: none;
+  }
+}
