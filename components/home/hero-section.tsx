@@ -12,8 +12,12 @@ export default function HeroSection({ eventStartISO }: HeroSectionProps) {
   // so it can extend below the hero content without forcing an artificial min-height that creates an empty gap.
   return (
     <section className="relative w-full">
-      <div className="px-4 md:px-12 xl:px-36 pt-24 md:pt-32 lg:pt-40 pb-16">
-        <div className="flex flex-col gap-10 max-w-[var(--spacing-content-max-w)] w-full mx-auto">
+      {/* Top padding: header is fixed at h-20 (80px), so pt-24/28/32 leaves
+          16/32/48px of breathing room below it on each breakpoint. Tightened
+          from pt-40 on lg so the two CTA pills fit above the fold on a
+          standard 900px desktop viewport. */}
+      <div className="px-4 md:px-12 xl:px-36 pt-24 md:pt-28 lg:pt-32 pb-12">
+        <div className="flex flex-col gap-8 max-w-[var(--spacing-content-max-w)] w-full mx-auto">
           <div className="w-full max-w-[1224px]">
             <RootFurtherMark size="xl" />
           </div>
