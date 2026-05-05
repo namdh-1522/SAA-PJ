@@ -59,15 +59,28 @@ export default function LanguageSelector() {
   }, [])
 
   const selectLocale = useCallback(
-    (code: SupportedLocale) => {
+    async (code: SupportedLocale) => {
       if (code === activeLocale) {
         closePanel()
         return
       }
       document.cookie = `NEXT_LOCALE=${code}; path=/; max-age=31536000`
-      persistMutation.mutate(code)
-      router.refresh()
+      // Close the panel immediately so the click feels snappy — the mutation
+      // + refresh run in the background.
       closePanel()
+      // MUST await persistence before refreshing — server-side `getRequestConfig`
+      // reads `user_preferences.locale` BEFORE the cookie (i18n/request.ts), so
+      // refreshing while the DB write is still in flight makes the page render
+      // with the stale locale (the visible bug: needed a second click / reload
+      // for the new language to apply). We swallow errors (FR-011: persistence
+      // failure doesn't block the UI flip — the cookie path still applies on
+      // refresh for unauthenticated users / write failures).
+      try {
+        await persistMutation.mutateAsync(code)
+      } catch {
+        // already logged via onError below
+      }
+      router.refresh()
     },
     [activeLocale, closePanel, persistMutation, router],
   )
