@@ -1,3 +1,5 @@
+import LoadingSpinner from '@/components/ui/loading-spinner'
+
 export default function Loading() {
   return (
     <div className="relative min-h-screen bg-[var(--color-bg-dark)] overflow-x-hidden">
@@ -15,6 +17,12 @@ export default function Loading() {
           ))}
         </div>
       </main>
+      <div
+        className="pointer-events-none fixed inset-0 z-[100] flex items-center justify-center"
+        style={{ color: 'var(--color-cta-bg)' }}
+      >
+        <LoadingSpinner size={56} />
+      </div>
     </div>
   )
 }
