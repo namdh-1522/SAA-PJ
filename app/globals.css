@@ -437,4 +437,13 @@ body {
     line-height: 1;
     pointer-events: none;
   }
+
+  /* Indeterminate sliding bar used by `<GlobalQueryLoadingBar />` — mimics
+     NProgress-style top loader. Shrunk + translated so the bar moves across
+     the viewport while scaling between 40–70% width for a "breathing" feel. */
+  @keyframes global-loader-slide {
+    0%   { transform: translateX(-100%) scaleX(0.4); transform-origin: left; }
+    50%  { transform: translateX(0%)    scaleX(0.7); transform-origin: center; }
+    100% { transform: translateX(100%)  scaleX(0.4); transform-origin: right; }
+  }
 }
