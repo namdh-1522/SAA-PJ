@@ -1,4 +1,3 @@
-import Image from 'next/image'
 import { redirect } from 'next/navigation'
 import { getTranslations } from 'next-intl/server'
 import { createClient } from '@/lib/supabase/server'
@@ -67,12 +66,12 @@ export default async function LoginPage() {
         <div className="flex flex-col gap-[80px]">
           {/* Brand logo */}
           <div className="w-full h-[200px] sm:h-auto">
-            <Image
-              src="/assets/login/logos/root-further-logo.png"
+            {/* eslint-disable-next-line @next/next/no-img-element -- static SVG; next/image would need dangerouslyAllowSVG */}
+            <img
+              src="/assets/login/logos/root-further-logo.svg"
               alt="Root Further — SAA 2025"
               width={451}
               height={200}
-              priority
               className="object-contain max-w-[451px] md:max-w-[360px] sm:max-w-[280px] sm:w-full sm:h-auto"
             />
           </div>
