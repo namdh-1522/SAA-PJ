@@ -19,7 +19,13 @@ export function useRealtimeKudos(onEvent: KudosRealtimeHandler): UseRealtimeKudo
   const [isConnected, setIsConnected] = useState(false)
   const lastEventTsRef = useRef<Record<string, number>>({})
   const onEventRef = useRef(onEvent)
-  onEventRef.current = onEvent
+  // Keep the ref pointing at the latest handler. Done in an effect (rather
+  // than in the render body) because writes to `ref.current` during render
+  // are flagged by `react-hooks/refs` and can produce inconsistent reads in
+  // concurrent rendering.
+  useEffect(() => {
+    onEventRef.current = onEvent
+  })
 
   const dedupedHandler = useCallback((event: KudosRealtimePayload) => {
     const key = `${event.type}:${event.payload.kudosId}`
