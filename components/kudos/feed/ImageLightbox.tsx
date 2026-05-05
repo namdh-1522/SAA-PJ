@@ -22,9 +22,14 @@ export default function ImageLightbox({
   const t = useTranslations('kudos.a11y')
   const [index, setIndex] = useState(initialIndex)
 
-  useEffect(() => {
+  // Reset to initialIndex each time the lightbox opens. Uses the
+  // "adjust state during render" pattern (React docs) instead of useEffect
+  // so the rule against setState-in-effect stays clean.
+  const [prevOpen, setPrevOpen] = useState(open)
+  if (prevOpen !== open) {
+    setPrevOpen(open)
     if (open) setIndex(initialIndex)
-  }, [open, initialIndex])
+  }
 
   const prev = useCallback(() => setIndex((i) => Math.max(0, i - 1)), [])
   const next = useCallback(() => setIndex((i) => Math.min(images.length - 1, i + 1)), [images.length])

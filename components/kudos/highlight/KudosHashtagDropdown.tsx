@@ -72,13 +72,14 @@ export default function KudosHashtagDropdown({
     }
   }, [isOpen])
 
-  useEffect(() => {
-    if (!isOpen) {
-      setFocusedIndex(-1)
-      return
-    }
-    setFocusedIndex(activeIndex >= 0 ? activeIndex : 0)
-  }, [isOpen, activeIndex])
+  // When the panel opens, jump focus to the active row (or first row).
+  // Uses the "adjust state during render" pattern (React docs) instead of
+  // a useEffect so the rule against setState-in-effect stays clean.
+  const [prevIsOpen, setPrevIsOpen] = useState(isOpen)
+  if (prevIsOpen !== isOpen) {
+    setPrevIsOpen(isOpen)
+    setFocusedIndex(isOpen ? (activeIndex >= 0 ? activeIndex : 0) : -1)
+  }
 
   const handleSelect = useCallback(
     (name: string | null) => {

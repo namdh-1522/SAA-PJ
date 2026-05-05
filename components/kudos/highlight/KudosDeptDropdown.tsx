@@ -81,13 +81,13 @@ export default function KudosDeptDropdown({
   }, [isOpen])
 
   // When the panel opens, jump focus to the active row (or first row).
-  useEffect(() => {
-    if (!isOpen) {
-      setFocusedIndex(-1)
-      return
-    }
-    setFocusedIndex(activeIndex >= 0 ? activeIndex : 0)
-  }, [isOpen, activeIndex])
+  // Uses the "adjust state during render" pattern (React docs) instead of
+  // a useEffect so the rule against setState-in-effect stays clean.
+  const [prevIsOpen, setPrevIsOpen] = useState(isOpen)
+  if (prevIsOpen !== isOpen) {
+    setPrevIsOpen(isOpen)
+    setFocusedIndex(isOpen ? (activeIndex >= 0 ? activeIndex : 0) : -1)
+  }
 
   const handleSelect = useCallback(
     (code: string | null) => {

@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useId, useState } from 'react'
+import { useId, useState } from 'react'
 import * as Dialog from '@radix-ui/react-dialog'
 import { useTranslations } from 'next-intl'
 
@@ -71,15 +71,20 @@ export default function KudoLinkDialog({
   const [urlValue, setUrlValue] = useState(initialUrl)
   const [urlError, setUrlError] = useState<string | null>(null)
 
-  // Reset fields every time the dialog opens so a previous session's input
-  // doesn't bleed into the next one.
-  useEffect(() => {
+  // Reset fields every time the dialog transitions closed → open, so a
+  // previous session's input doesn't bleed into the next one. Uses the
+  // "adjust state during render" pattern (React docs) instead of a
+  // useEffect — the conditional setState makes React re-render with the
+  // fresh state without committing the stale state, so no cascade.
+  const [prevOpen, setPrevOpen] = useState(open)
+  if (prevOpen !== open) {
+    setPrevOpen(open)
     if (open) {
       setContentValue(initialContent)
       setUrlValue(initialUrl)
       setUrlError(null)
     }
-  }, [open, initialContent, initialUrl])
+  }
 
   const trimmedUrl = urlValue.trim()
   const saveDisabled = trimmedUrl.length === 0

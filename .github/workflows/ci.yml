@@ -34,14 +34,10 @@ jobs:
       - name: Type check
         run: npx tsc --noEmit
 
-      # Non-blocking — there are 5 pre-existing React Compiler errors in Kudos
-      # components (KudoLinkDialog, ImageLightbox, KudosDeptDropdown,
-      # KudosHashtagDropdown, use-realtime-kudos). Surface them in the run
-      # summary so they get attention, but don't block PRs until the team has
-      # time to refactor. Once those are fixed, remove `continue-on-error`.
-      - name: Lint (non-blocking)
+      # Strict gate — lint errors break the build. Warnings are still allowed
+      # (10 unused-vars warnings as of last check), but errors are not.
+      - name: Lint
         run: npm run lint
-        continue-on-error: true
 
       # Strict gate — failing tests break the build.
       # Integration tests are skipped (they need a live Supabase + Docker;
